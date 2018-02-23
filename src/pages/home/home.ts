@@ -37,7 +37,7 @@ export class HomePage {
           text: 'Fazer Download',
           role: 'destructive',
           handler: () => {
-            window.open(`assets/sounds/${id}.ogg`)
+            window.open(`assets/sounds/${id}.ogg`, `_blank`)
           }
         }, {
           text: 'Cancelar',
