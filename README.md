@@ -8,19 +8,21 @@
 1.  Clone the repository: `git clone https://github.com/your-username/pwa-romaneio.git`
 2.  Navigate to the project directory: `cd pwa-romaneio`
 3.  Install dependencies: `npm install`
-4.  Configure TypeScript: `npm install --save-dev ts-jest`
-5.  Run tests: `npm test`
+4.  Run the dev server: `npm run ionic:serve`
 
 **Usage:**
 
 *   **Development:**
-    *   `npm run build`: Builds the application for deployment.
-    *   `npm run start`: Starts the application in the browser.
-*   **Testing:**
-    *   `npm run test`: Executes the unit and integration tests.
-    *   `npm run lint`: Runs the linter to check code style.
-*   **Deployment:**
-    *   `npm run deploy`: (Requires a separate deployment script) Deploy to your environment.
+    *   `npm run ionic:serve`: Serves the application in the browser for development.
+    *   `npm run build` (or `npm run ionic:build`): Builds the application for deployment into `www/`.
+*   **Quality:**
+    *   `npm run lint`: Runs the TSLint checks defined in `tslint.json`.
+    *   There is no automated test suite yet; `npm test` is not defined.
+*   **Deployment:** Not scripted. Publish the output of `npm run build` to your hosting of choice.
+
+**Note:** The build toolchain uses `node-sass` 4.x, which only runs on older Node.js versions.
+If `npm run build` or `npm run lint` fail with a "Node Sass does not yet support your current environment" error,
+use an older LTS Node.js release (for example, Node 8 or 10).
 
 **Files:**
 
