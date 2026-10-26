@@ -26,7 +26,7 @@ export class HomePage {
 
   playRomaneio(id: string): void {
     let audio = new Audio(`assets/sounds/${id}.ogg`);
-    audio.play();
+    audio.play().catch(err => console.error(`Falha ao tocar romaneio ${id}`, err));
   }
 
   presentActionSheet(id: string) {
